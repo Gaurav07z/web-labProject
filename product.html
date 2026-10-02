@@ -2,65 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>MOVE - Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVE | Products</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-    <div class="logo">MOVE</div>
-    <div class="links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
+<div class="links">
+        <a href="index.html">HOME</a>
+        <a href="product.html">PRODUCT</a>
+        <a href="about.html">ABOUT</a>
     </div>
-    <div class="icons">♡　🛒</div>
+
+   <a href="index.html" class="logo">
+    <img src="./images/logo.png" alt="GoodOne">
+</a>
+
 </nav>
 
-<section class="page-head">
+
+<section class="page-title">
+
     <small>OUR COLLECTION</small>
-    <h1>PRODUCTS.</h1>
-</section>
 
-<section class="products">
-
-    <div class="card">
-        <img src="./images/shoe1.jpg" alt="Move Runner">
-        <small>RUNNING</small>
-        <h2>MOVE RUNNER</h2>
-        <p>₹4,999</p>
-        <a class="btn dark" href="#">Buy Now →</a>
-    </div>
-
-    <div class="card">
-        <img src="./images/shoe2.jpg" alt="Move Air">
-        <small>SPORT</small>
-        <h2>MOVE AIR</h2>
-        <p>₹5,499</p>
-        <a class="btn dark" href="#">Buy Now →</a>
-    </div>
-
-    <div class="card">
-        <img src="./images/shoe3.jpg" alt="Move Street">
-        <small>CASUAL</small>
-        <h2>MOVE STREET</h2>
-        <p>₹3,999</p>
-        <a class="btn dark" href="#">Buy Now →</a>
-    </div>
+    <h1>
+        FIND YOUR<br>
+        SOUND.
+    </h1>
 
 </section>
+
+
+<section class="product-list">
+
+
+    <div class="product">
+
+        <div class="product-image">
+            <img src="./images/1st-top-image.png" alt="MOVE Pro">
+        </div>
+
+        <div class="product-info">
+
+            <small>PREMIUM HEADPHONES</small>
+
+            <h2>MOVE PRO</h2>
+
+            <p>
+                Powerful bass, immersive sound and premium
+                comfort for everyday listening.
+            </p>
+
+            <h3>₹7,999</h3>
+
+            <a href="#" class="product-btn">
+                BUY NOW →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="product reverse">
+
+        <div class="product-image">
+            <img src="./images/2nd-roseGold-image.png" alt="MOVE Rose Gold">
+        </div>
+
+        <div class="product-info">
+
+            <small>ROSE GOLD EDITION</small>
+
+            <h2>MOVE AIR</h2>
+
+            <p>
+                Elegant design combined with clear sound
+                and all-day wireless comfort.
+            </p>
+
+            <h3>₹6,499</h3>
+
+            <a href="#" class="product-btn">
+                BUY NOW →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="product">
+
+        <div class="product-image">
+            <img src="./images/3rd-ali-image.png" alt="MOVE Studio">
+        </div>
+
+        <div class="product-info">
+
+            <small>STUDIO SERIES</small>
+
+            <h2>MOVE STUDIO</h2>
+
+            <p>
+                Rich audio and balanced sound designed
+                for music lovers and creators.
+            </p>
+
+            <h3>₹8,999</h3>
+
+            <a href="#" class="product-btn">
+                BUY NOW →
+            </a>
+
+        </div>
+
+    </div>
+
+
+</section>
+
 
 <footer>
+
     <h2>MOVE</h2>
+
     <div>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
+        <a href="index.html">HOME</a>
+        <a href="product.html">PRODUCT</a>
+        <a href="about.html">ABOUT</a>
     </div>
-    <p>© 2026 MOVE. All rights reserved.</p>
+
+    <p>© 2026 MOVE. ALL RIGHTS RESERVED.</p>
+
 </footer>
+<section class="cart-section">
+
+    <div class="cart-title">
+        <small>YOUR CART</small>
+        <h2>READY<br>TO MOVE?</h2>
+    </div>
+
+    <div class="cart-box">
+
+        <div class="cart-product">
+            <img src="./images/1st-top-image.png" alt="MOVE Pro">
+
+            <div>
+                <h3>MOVE PRO</h3>
+                <p>Premium Wireless Headphones</p>
+                <strong>₹7,999</strong>
+            </div>
+        </div>
+
+        <div class="cart-actions">
+            <button onclick="removeItem()">−</button>
+            <span id="quantity">1</span>
+            <button onclick="addItem()">+</button>
+
+            <button class="buy-btn" onclick="buyNow()">
+                BUY NOW →
+            </button>
+        </div>
+
+    </div>
+
+    <div class="cart-total">
+        Total: ₹<span id="total">7,999</span>
+    </div>
+
+</section>
 
 </body>
 </html>

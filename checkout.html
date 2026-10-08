@@ -1,122 +1,244 @@
-<section class="checkout">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-  <!-- YOUR DETAILS -->
-  <div class="checkout-form">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <small>DELIVERY INFORMATION</small>
+    <title>GoodOne - Checkout</title>
 
-    <h2>YOUR DETAILS</h2>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <form>
+  <body>
+    <!-- ================================
+         NAVBAR
+    ================================= -->
 
-      <div class="form-group">
-        <label>Full Name</label>
-        <input
-          type="text"
-          placeholder="Enter your name"
-          required
-        >
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="./images/logo.png" alt="GoodOne Logo" />
+        </a>
       </div>
 
-      <div class="form-group">
-        <label>Email Address</label>
-        <input
-          type="email"
-          placeholder="Enter your email"
-          required
-        >
+      <div class="links">
+        <a href="index.html">HOME</a>
+
+        <a href="product.html">PRODUCT</a>
+
+        <a href="headphones.html">HEADPHONES</a>
+
+        <a href="wireless.html">WIRELESS</a>
+
+        <a href="about.html">ABOUT</a>
+
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </nav>
+
+    <!-- ================================
+         CHECKOUT
+    ================================= -->
+
+    <section class="checkout">
+      <!-- ============================
+             YOUR DETAILS
+        ============================= -->
+
+      <div class="checkout-form">
+        <small>DELIVERY INFORMATION</small>
+
+        <h2>YOUR DETAILS</h2>
+
+        <form action="#" method="post">
+          <!-- FULL NAME -->
+
+          <div class="form-group">
+            <label for="name"> Full Name </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <!-- EMAIL -->
+
+          <div class="form-group">
+            <label for="email"> Email Address </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <!-- PHONE -->
+
+          <div class="form-group">
+            <label for="phone"> Phone Number </label>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+
+          <!-- CITY -->
+
+          <div class="form-group">
+            <label for="city"> City </label>
+
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="Enter your city"
+              required
+            />
+          </div>
+
+          <!-- DELIVERY ADDRESS -->
+
+          <div class="form-group full">
+            <label for="address"> Delivery Address </label>
+
+            <textarea
+              id="address"
+              name="address"
+              placeholder="Enter your complete address"
+              required
+            ></textarea>
+          </div>
+
+          <!-- PIN CODE -->
+
+          <div class="form-group">
+            <label for="pin"> PIN Code </label>
+
+            <input
+              type="text"
+              id="pin"
+              name="pin"
+              placeholder="Enter PIN code"
+              maxlength="6"
+              required
+            />
+          </div>
+
+          <!-- PAYMENT -->
+
+          <div class="form-group">
+            <label for="payment"> Payment Method </label>
+
+            <select id="payment" name="payment">
+              <option value="cod">Cash on Delivery</option>
+
+              <option value="upi">UPI</option>
+
+              <option value="card">Credit / Debit Card</option>
+            </select>
+          </div>
+
+          <!-- PLACE ORDER -->
+
+          <button type="submit" class="btn">PLACE ORDER →</button>
+        </form>
       </div>
 
-      <div class="form-group">
-        <label>Phone Number</label>
-        <input
-          type="tel"
-          placeholder="Enter your phone number"
-          required
-        >
+      <!-- ============================
+             ORDER SUMMARY
+        ============================= -->
+
+      <div class="order-summary">
+        <small>ORDER SUMMARY</small>
+
+        <h2>YOUR ORDER</h2>
+
+        <!-- PRODUCT 1 -->
+
+        <div class="order-item">
+          <span> GoodOne Pro </span>
+
+          <span> ₹7,999 </span>
+        </div>
+
+        <!-- PRODUCT 2 -->
+
+        <div class="order-item">
+          <span> GoodOne Air </span>
+
+          <span> ₹6,499 </span>
+        </div>
+
+        <!-- TOTAL -->
+
+        <div class="order-total">
+          <!-- SUBTOTAL -->
+
+          <div class="order-row">
+            <span> Subtotal </span>
+
+            <span> ₹14,498 </span>
+          </div>
+
+          <!-- DELIVERY -->
+
+          <div class="order-row">
+            <span> Delivery </span>
+
+            <span> FREE </span>
+          </div>
+
+          <!-- FINAL TOTAL -->
+
+          <div class="order-row total">
+            <span> TOTAL </span>
+
+            <span> ₹14,498 </span>
+          </div>
+        </div>
+
+        <!-- BACK TO CART -->
+
+        <a href="cart.html" class="back-cart"> ← BACK TO CART </a>
+      </div>
+    </section>
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+      <a href="index.html" class="footer-logo">
+        <img src="./images/logo.png" alt="GoodOne Logo" />
+      </a>
+
+      <h2>GOODONE</h2>
+
+      <div>
+        <a href="index.html"> HOME </a>
+
+        <a href="product.html"> PRODUCTS </a>
+
+        <a href="about.html"> ABOUT </a>
+
+        <a href="contact.html"> CONTACT </a>
+
+        <a href="support.html"> SUPPORT </a>
       </div>
 
-      <div class="form-group full">
-        <label>Delivery Address</label>
-        <textarea
-          placeholder="Enter your complete address"
-          required
-        ></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>City</label>
-        <input
-          type="text"
-          placeholder="Enter your city"
-          required
-        >
-      </div>
-
-      <div class="form-group">
-        <label>PIN Code</label>
-        <input
-          type="text"
-          placeholder="Enter PIN code"
-          required
-        >
-      </div>
-
-      <div class="form-group full">
-        <label>Payment Method</label>
-
-        <select>
-          <option>Cash on Delivery</option>
-          <option>UPI</option>
-          <option>Credit / Debit Card</option>
-        </select>
-      </div>
-
-      <button class="btn" type="submit">
-        PLACE ORDER →
-      </button>
-
-    </form>
-
-  </div>
-
-
-  <!-- ORDER SUMMARY -->
-  <div class="order-summary">
-
-    <small>ORDER SUMMARY</small>
-
-    <h2>YOUR ORDER</h2>
-
-    <div class="order-item">
-      <span>GoodOne Pro</span>
-      <span>₹7,999</span>
-    </div>
-
-    <div class="order-item">
-      <span>GoodOne Air</span>
-      <span>₹6,499</span>
-    </div>
-
-    <div class="order-total">
-
-      <div class="order-row">
-        <span>Subtotal</span>
-        <span>₹14,498</span>
-      </div>
-
-      <div class="order-row">
-        <span>Delivery</span>
-        <span>FREE</span>
-      </div>
-
-      <div class="order-row total">
-        <span>TOTAL</span>
-        <span>₹14,498</span>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+      <p>© 2026 GoodOne. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

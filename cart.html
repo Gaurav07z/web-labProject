@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>GoodOne | Cart</title>
@@ -11,243 +13,301 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
 
-        <div class="links">
-            <a href="index.html">HOME</a>
-            <a href="product.html">PRODUCT</a>
-            <a href="headphones.html">HEADPHONES</a>
-            <a href="wireless.html">WIRELESS</a>
-            <a href="offers.html">OFFERS</a>
-            <a href="about.html">ABOUT</a>
-        </div>
+    <!-- ================================
+         LOGO
+    ================================= -->
 
-        <a href="index.html" class="logo">
-            <img src="./images/logo.png" alt="GoodOne">
-        </a>
+    <a href="index.html" class="cart-logo">
 
-    </nav>
+        <img
+            src="./images/logo.png"
+            alt="GoodOne Logo"
+        >
+
+    </a>
 
 
-    <!-- PAGE HEADER -->
-    <section class="page-title">
 
-        <small>GOODONE STORE</small>
+    <!-- ================================
+         CART
+    ================================= -->
 
-        <h1>
-            YOUR<br>
-            CART.
-        </h1>
+    <main class="cart-page">
 
-        <p>
-            Review your selected GoodOne headphones
-            before continuing to checkout.
-        </p>
-
-    </section>
+        <section class="cart-card">
 
 
-    <!-- CART -->
-    <section class="cart">
+            <!-- HEADING -->
 
-        <h2>SHOPPING CART</h2>
+            <small>GOODONE SHOPPING CART</small>
 
-        <!-- CART ITEM -->
-        <div class="cart-item">
-
-            <img
-                src="./images/1st-top-image.png"
-                alt="GoodOne Pro">
-
-            <div class="cart-info">
-
-                <small>GOODONE</small>
-
-                <h3>GOODONE PRO</h3>
-
-                <p>
-                    Wireless headphones with premium
-                    sound and comfortable design.
-                </p>
-
-                <p>
-                    Quantity: <strong>1</strong>
-                </p>
-
-            </div>
-
-            <div class="cart-price">
-
-                <h3>₹7,999</h3>
-
-                <a href="product.html" class="product-btn">
-                    REMOVE
-                </a>
-
-            </div>
-
-        </div>
+            <h1>
+                YOUR CART
+            </h1>
 
 
-        <!-- CART ITEM -->
-        <div class="cart-item">
 
-            <img
-                src="./images/2nd-roseGold-image.png"
-                alt="GoodOne Air">
+            <!-- ============================
+                 PRODUCT 1
+            ============================= -->
 
-            <div class="cart-info">
+            <div class="cart-item">
 
-                <small>GOODONE</small>
+                <div class="cart-product">
 
-                <h3>GOODONE AIR</h3>
+                    <img
+                        src="./images/1st-top-image.png"
+                        alt="GoodOne Pro"
+                    >
 
-                <p>
-                    Lightweight wireless headphones
-                    designed for everyday listening.
-                </p>
+                    <div>
 
-                <p>
-                    Quantity: <strong>1</strong>
-                </p>
+                        <h3>
+                            GoodOne Pro
+                        </h3>
+
+                        <p>
+                            Premium Wireless Headphones
+                        </p>
+
+                        <strong>
+                            ₹7,999
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cart-controls">
+
+                    <button
+                        type="button"
+                        onclick="decreasePro()"
+                    >
+                        −
+                    </button>
+
+                    <span id="proQuantity">
+                        1
+                    </span>
+
+                    <button
+                        type="button"
+                        onclick="increasePro()"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+
+                <div class="cart-price">
+
+                    ₹<span id="proTotal">
+                        7,999
+                    </span>
+
+                </div>
 
             </div>
 
-            <div class="cart-price">
 
-                <h3>₹6,499</h3>
 
-                <a href="product.html" class="product-btn">
-                    REMOVE
-                </a>
+            <!-- ============================
+                 PRODUCT 2
+            ============================= -->
+
+            <div class="cart-item">
+
+                <div class="cart-product">
+
+                    <img
+                        src="./images/2nd-roseGold-image.png"
+                        alt="GoodOne Air"
+                    >
+
+                    <div>
+
+                        <h3>
+                            GoodOne Air
+                        </h3>
+
+                        <p>
+                            Wireless Headphones
+                        </p>
+
+                        <strong>
+                            ₹6,499
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cart-controls">
+
+                    <button
+                        type="button"
+                        onclick="decreaseAir()"
+                    >
+                        −
+                    </button>
+
+                    <span id="airQuantity">
+                        1
+                    </span>
+
+                    <button
+                        type="button"
+                        onclick="increaseAir()"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+
+                <div class="cart-price">
+
+                    ₹<span id="airTotal">
+                        6,499
+                    </span>
+
+                </div>
 
             </div>
 
-        </div>
 
 
-        <!-- CART TOTAL -->
-        <div class="cart-total">
+            <!-- ================================
+                 CART SUMMARY
+            ================================= -->
 
-            <h2>CART TOTAL</h2>
-
-            <p>
-                GoodOne Pro:
-                <strong>₹7,999</strong>
-            </p>
-
-            <p>
-                GoodOne Air:
-                <strong>₹6,499</strong>
-            </p>
-
-            <hr>
-
-            <h2>
-                TOTAL:
-                <strong>₹14,498</strong>
-            </h2>
-
-            <br>
-
-            <a href="checkout.html" class="btn">
-                PROCEED TO CHECKOUT →
-            </a>
-
-        </div>
-
-    </section>
+            <div class="cart-summary">
 
 
-    <!-- CONTINUE SHOPPING -->
-    <section class="comfort">
+                <div class="summary-row">
 
-        <small>NOT DONE SHOPPING?</small>
+                    <span>
+                        Subtotal
+                    </span>
 
-        <h2>
-            FIND MORE<br>
-            GOODONE<br>
-            PRODUCTS.
-        </h2>
+                    <span>
+                        ₹<span id="subtotal">
+                            14,498
+                        </span>
+                    </span>
 
-        <p>
-            Explore our complete collection of
-            headphones and wireless products.
-        </p>
-
-        <br>
-
-        <a href="product.html" class="product-btn">
-            CONTINUE SHOPPING →
-        </a>
-
-    </section>
+                </div>
 
 
-    <!-- QUICK LINKS -->
-    <section class="about-bottom">
+                <div class="summary-row">
 
-        <div>
+                    <span>
+                        Delivery
+                    </span>
 
-            <small>GOODONE SUPPORT</small>
+                    <span class="free">
+                        FREE
+                    </span>
 
-            <h2>
-                NEED<br>
-                HELP?
-            </h2>
-
-        </div>
-
-        <div>
-
-            <a href="login.html" class="product-btn">
-                LOGIN →
-            </a>
-
-            <br><br>
-
-            <a href="support.html" class="product-btn">
-                CUSTOMER SUPPORT →
-            </a>
-
-            <br><br>
-
-            <a href="contact.html" class="product-btn">
-                CONTACT US →
-            </a>
-
-        </div>
-
-    </section>
+                </div>
 
 
-    <!-- FOOTER -->
+                <div class="summary-total">
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <span>
+                        ₹<span id="grandTotal">
+                            14,498
+                        </span>
+                    </span>
+
+                </div>
+
+
+                <div class="cart-buttons">
+
+                    <a
+                        href="product.html"
+                        class="continue-btn"
+                    >
+                        ← CONTINUE SHOPPING
+                    </a>
+
+                    <a
+                        href="checkout.html"
+                        class="checkout-btn"
+                    >
+                        CHECKOUT →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
     <footer>
 
-        <a href="index.html" class="footer-logo">
-            <img src="./images/logo.png" alt="GoodOne">
+        <a
+            href="index.html"
+            class="footer-logo"
+        >
+
+            <img
+                src="./images/logo.png"
+                alt="GoodOne"
+            >
+
         </a>
+
 
         <div>
 
-            <a href="index.html">HOME</a>
-            <a href="product.html">PRODUCT</a>
-            <a href="headphones.html">HEADPHONES</a>
-            <a href="wireless.html">WIRELESS</a>
-            <a href="offers.html">OFFERS</a>
-            <a href="cart.html">CART</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="support.html">SUPPORT</a>
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="product.html">
+                PRODUCT
+            </a>
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+
+            <a href="support.html">
+                SUPPORT
+            </a>
 
         </div>
+
 
         <p>
             © 2026 GOODONE. ALL RIGHTS RESERVED.
         </p>
 
     </footer>
-
 </body>
+
 </html>
